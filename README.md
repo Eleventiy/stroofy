@@ -1,2 +1,0 @@
-# stroofy
-HTML template
