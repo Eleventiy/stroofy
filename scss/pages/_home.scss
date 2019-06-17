@@ -1,4 +1,3 @@
-/* All styles */
 .dgAtll {
     background: #098B8C;
     border: solid 1px transparent;
@@ -736,6 +735,18 @@
     .kuBnqT a {
         color: #2F3034;
     }
+}
+
+.iebsHb {
+    background-color: rgb(255, 255, 255);
+    left: 0px;
+    min-height: 70px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 100;
+    padding: 0px 30px;
+    transition: background-color 100ms ease-out 0s;
 }
 
 /* sc-component-id: BenchSwiper__SwiperContainer-sc-1lm456n-0 */
@@ -2065,6 +2076,32 @@
         border-color: #2F3034;
         color: #FFFFFF;
     }
+
+    .loqwYk {
+        font-size: 15px;
+        position: relative;
+        padding: 6px 16px;
+    }
+
+    .loqwYk a {
+        display: block;
+    }
+
+    .loqwYk a {
+        color: rgb(255, 255, 255);
+        background: rgb(9, 139, 140);
+        border-color: rgb(9, 139, 140);
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 6px 12px;
+    }
+
+    .loqwYk a:hover {
+        color: rgb(255, 255, 255);
+        background: rgb(1, 113, 114);
+        border-color: rgb(1, 113, 114);
+    }
 }
 
 @media (max-width:800px) {
@@ -2089,6 +2126,29 @@
         padding: 0;
         text-align: center;
         width: 250px;
+    }
+
+    .loqwYk {
+        width: 100%;
+    }
+
+    .loqwYk a {
+        color: rgb(47, 48, 52);
+        display: block;
+        font-size: 15px;
+        padding: 16px 0px;
+    }
+
+    .loqwYk.loqwYk a {
+        color: rgb(255, 255, 255);
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 250px;
+        background: rgb(9, 139, 140);
+        border-radius: 3px;
+        margin: 16px auto;
+        padding: 0px;
     }
 }
 
