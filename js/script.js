@@ -42,3 +42,29 @@ var mySwiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev'
     }
 });
+
+
+/**
+ * Mobile hamburger
+ */
+function mobileHamburger() {
+    var button = document.querySelector('.hamburger');
+    var header = document.querySelector('.NavContainer-sc-1hny48c-0'); // Main header element
+    var allMenus = document.querySelectorAll('.NavSection-ukplw-0'); // All menus
+    var leftMenu = allMenus[0]; // Left menu
+    var rightMenu = allMenus[allMenus.length - 1]; // Right menu
+
+    button.onclick = function () {
+        this.classList.toggle('is-active');
+
+        header.classList.toggle('kuBnqT');
+        header.classList.toggle('dHinOi');
+
+        leftMenu.classList.toggle('iveURn');
+        leftMenu.classList.toggle('dDoPjt');
+
+        rightMenu.classList.toggle('bQjwka');
+        rightMenu.classList.toggle('jramxf');
+    }
+}
+mobileHamburger();
