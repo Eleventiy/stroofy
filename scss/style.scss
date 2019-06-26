@@ -1,15 +1,16 @@
 // Helpers
-@import 'helpers/fonts';
-@import 'helpers/general';
+@import "helpers/fonts";
+@import "helpers/general";
 
 // Partials
-@import 'partials/header';
-@import 'partials/footer';
+@import "partials/header";
+@import "partials/footer";
 
 // Components
-@import 'components/hamburger';
-@import 'components/swiper';
+@import "components/hamburger";
+@import "components/swiper";
 
 // Pages
-@import 'pages/home';
-@import 'pages/how-it-works';
+@import "pages/home";
+@import "pages/how-it-works";
+@import "pages/carrers";
