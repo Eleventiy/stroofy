@@ -23,7 +23,12 @@ function templates() {
         }
       })
     )
-    .pipe(dest("dist/"));
+    .pipe(dest("dist/"))
+    .pipe(
+      browserSync.reload({
+        stream: true
+      })
+    );
 }
 
 function styles() {
@@ -57,15 +62,16 @@ function scripts() {
     );
 }
 
-// TODO: Finish
 function images() {
-  return src("src/img/**/*.{png,jpg}").pipe(browserSync.reload());
+  return src("src/img/**/*").pipe(dest("dist/img"));
+}
+
+function icons() {
+  return src("src/icons/**/*").pipe(dest("dist/icons"));
 }
 
 function fonts() {
-  return src("src/fonts/**/*")
-    .pipe(dest("dist/fonts"))
-    .pipe(browserSync.reload());
+  return src("src/fonts/**/*").pipe(dest("dist/fonts"));
 }
 
 async function clean() {
@@ -77,12 +83,15 @@ function watching() {
   watch("src/pug/pages/*.pug", templates);
   watch("src/scss/**/*.scss", styles);
   watch("src/js/*.js", scripts);
-  watch("src/img/**/*.{png,jpg}", images);
+  watch("src/img/**/*", images);
   watch("src/fonts/**/*", fonts);
 }
 
 async function build() {
-  series(await clean, parallel(templates, styles, scripts, images, fonts));
+  series(
+    await clean,
+    await parallel(templates, styles, scripts, images, icons, fonts)
+  );
 }
 
 exports.default = series(build, parallel(watching, localServer));

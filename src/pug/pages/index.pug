@@ -1,43 +1,41 @@
-extends ../layout/default
+extends ../layout/default 
 
 block variables
-	- var title = 'Главная страница'
-	- var pageClass = 'index-page'
+	- var title = 'Home page'
+	- var pageClass = 'index-page'  
 
 block content
-	section.sect-hero
-		.container
-			.hero-content
-				.hero-content__weather
-					p
-						| Погода в Буковеле
-						img(src="static/img/content/icons/cloud.png" alt="Cloud icon")
-						span
-							| 4
-							sup ˚
-							| C
+	//- Hero section
+	include ../sections/index/hero
 
-				h1.hero-content__title В буковель
-				h2.hero-content__subtitle на вертолете
+	//- About section
+	include ../sections/index/about
 
-				.hero-content__descr
-					p
-						| Дорожишь своим временем и любишь
-						br
-						| кататься на лыжах? Заказывай быстрый
-						br
-						| перелет и будешь
-						strong в Буковели всего
-							br
-							| через 3 часа.
-				.hero-content__watch
-					a.hero-content__watch-link(href="#")
-						+icon("play")
-						| Смотреть видео
-					.circle.delay1
-					.circle.delay2
-					.circle.delay3
+	//- Separator section
+	section.SectionContainer__StyledSection-nrgtje-1.bAuXbh
+		.SectionContainer__SectionSpacer-nrgtje-0.hWFzSV.Spacer-sc-1scsk4-0.ccwlxp
+			.GridContainer-sc-15zswxm-0.fnLMAL
+				.GridRow-sc-4xpp2g-0.hiaijr
+					.GridColumn-sc-1eg69m4-0.bPOobo
+						.SectionGrid__WidgetStack-sc-1deimss-1.eOXUCd
+							.SectionGrid__WidgetSpacer-sc-1deimss-0.dMxHal.Spacer-sc-1scsk4-0.fohDeA
+							hr.HR-sc-80rc3k-0.kUardU(color='#2F3034')
 
-			.hero-copter
-				.hero-copter__wrapper
-					img(src="static/img/content/copter.png")
+	//- Partners section
+	include ../sections/index/partners
+
+	//- Team section
+	include ../sections/index/team
+
+	//- Benefit sections
+	include ../sections/index/benefit
+
+	//- Slider section
+	include ../sections/index/slider
+
+	//- Features section
+	include ../sections/index/features
+
+	//- Form section
+	include ../sections/index/features
+	

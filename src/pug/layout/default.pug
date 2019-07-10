@@ -2,25 +2,37 @@ include ../mixins
 block variables
 
 doctype html
-html(lang="ru-RU")
+html(lang="en-US")
 	head
-		meta(charset="utf-8")
-		title #{title}
-		<!--[if IE]>
-		meta(http-equiv='X-UA-Compatible', content="IE = edge")
-		<![endif]-->
-		meta(name="viewport" content="width=device-width,initial-scale=1")
-		meta(name="keywords" content="")
+		//- Meta tags
+		meta(charset='utf-8')
+		meta(http-equiv='x-ua-compatible' content='ie=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no')
+		
+		//- Page title
+		title Stroofy - #{title}
+		
+		//- Favicon
+		//- link(rel='canonical' href='#')
+		//- link(rel='apple-touch-icon' type='image/png' href='/icons/apple-touch-icon.png')
+		//- link(rel='icon' type='image/png' href='/icons/favicon-16x16.png')
+		//- link(rel='icon' type='image/png' href='/icons/favicon-32x32.png')
+		//- link(rel='manifest' href='/icons/manifest.json')
+		//- link(rel='shortcut icon' href='/favicon.ico')
+		
+		//- Styles
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@4.5.0/dist/css/swiper.min.css')
+		link(rel='stylesheet' href='css/style.css')
 
-		link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+	body(class="sticky-header")
+		.templateWrapper__Root
+			include ../partials/header
 
-	body(class=pageClass)
-		include ../partials/header
+			main.templateWrapper__MainWrapper-sc-1w9xp0f-1
+				block content
 
-		main
-			block content
+			include ../partials/footer
 
-		include ../partials/footer
-
+		script(src='https://cdn.jsdelivr.net/npm/swiper@4.5.0/dist/js/swiper.min.js')
 		script(src="js/scripts.min.js")
 		block script
