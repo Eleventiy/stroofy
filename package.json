@@ -1,0 +1,30 @@
+{
+  "name": "stroofy",
+  "version": "1.0.0",
+  "description": "HTML template",
+  "main": "index.js",
+  "repository": "git@github.com:Eleventiy/stroofy.git",
+  "author": "Leo <eleventiy96@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "del": "^5.0.0",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-load-plugins": "^2.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
